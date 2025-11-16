@@ -5,6 +5,9 @@ This project allows you to control a BLE-enabled standing desk (like those using
 It uses a PID-style control loop to move to a specific height with high accuracy, compensating for motor "coasting" or "overshoot." 
 It's configured via a simple `config.json` file, so it should be adaptable to other desks.
 
+Tested to be  working with:
+1. Handset JCHT35K24C (https://www.jiecang.com/product/jcht35k24c.html)
+
 ## Key Features
 
 * **Move to precise height:** `sudo python3 move_smart_cli.py 95.5`
