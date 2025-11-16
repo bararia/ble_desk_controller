@@ -13,7 +13,7 @@ It's configured via a simple `config.json` file, so it should be adaptable to ot
     2.  **Settle:** Waits for the desk to stop coasting.
     3.  **Nudge & Correct:** Uses tiny "nudges" to hit the target with millimeter precision.
 * **Autotune Script:** Includes a script to automatically test your desk's physics and find the perfect tuning parameters.
-* **Config File Based:** All device addresses, UUIDs, and tuning parameters are in `desk_config.json`, not hard-coded.
+* **Config File Based:** All device addresses, UUIDs, and tuning parameters are in `config.json`, not hard-coded.
 
 ## Installation
 
@@ -50,14 +50,12 @@ Run the autotune.py script. You need to provide:
 
 Make sure that your desk is at a normal height (80-85cm)
 
-Your config file (e.g., config.json).
-
 A target height to test around (e.g., 95.0).
 
 Bash
 
 # This will move the desk up and down 3 times to get an average.
-sudo python3 autotune.py desk_config.json 95.0
+sudo python3 autotune.py 95.0
 The script will run for a few minutes. When it finishes, it will show you the measured overshoot values:
 
 --- Autotune Results ---
@@ -99,5 +97,6 @@ Key Commands:
 | Move Down 	| F1F10200027E 	| Moves desk down (must be looped) 	| 
 | Stop 		| F1F1L2B002B7E | Stops movement (also wakes desk) 	| 
 | Get Height 	| F1F10700077E 	| Requests a height update packet 	|
+|-----------------------------------------------------------------------| 
 
 Height Packet: The desk responds on the notify characteristic with a packet containing ...f2f20103... followed by the height as a 2-byte hex value (in millimeters).
