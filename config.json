@@ -1,0 +1,24 @@
+{
+    "device_address": "XX:XX:XX:XX:XX:XX",
+    "write_uuid": "0000fe61-0000-1000-8000-00805f9b34fb",
+    "notify_uuid": "0000fe62-0000-1000-8000-00805f9b34fb",
+    "commands": {
+        "move_up": "F1F10100017E",
+        "move_down": "F1F10200027E",
+        "stop": "F1F12B002B7E",
+        "fetch_height": "F1F10700077E"
+    },
+    "tuning_params": {
+        "overshoot_mm_up": 10,
+        "overshoot_mm_down": 17,
+        "final_margin_mm": 0,
+        "nudge_coarse_s": 0.1,
+        "nudge_fine_s": 0.05,
+        "settle_time_s": 1.5,
+        "nudge_limit": 10
+    },
+    "height_limits": {
+        "min_cm": 80.0,
+        "max_cm": 110.9
+    }
+}
